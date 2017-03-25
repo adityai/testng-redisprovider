@@ -48,7 +48,7 @@ public class NewTest {
   
 
   /**
-   * Before suite, create redis embedded instance and insert data
+   * Before suite, create sqlite database instance and insert data
    */
   @BeforeSuite
   private void initSqlite() {
@@ -92,6 +92,12 @@ public class NewTest {
 
   }
 
+  /**
+   * Dataprovider for reading data from sqlite database
+   * 
+   * @param method
+   * @return object array with test data
+   */
   @DataProvider(name="sqliteDataProvider")
   private Object[][] getData(Method method) {
 	    Object[][] data = null;
